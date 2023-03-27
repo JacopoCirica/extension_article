@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ChatGPT-Rewriter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="live-caption-popup">
+  <header>
+    <img src="caption.png" alt="Extension logo">
+    <h2 class="live-caption-title">ChatGPT-Rewriter</h2>
+    <br>
+    <form>
+      <label for="message">Paste the URL</label><br><br>
+      <textarea id="message" name="message" class='url'></textarea>
+    </form>
+  </header>
+  <hr>
+  <main class="content-container">
+    <!-- list of languages found in this blog post:
+      https://ourcodeworld.com/articles/read/362/getting-started-with-the-speech-recognition-api-in-javascript
+
+      Might have been updated by now but I haven't found any official documentation.
+    -->
+    <div>
+      <h3>Headline</h3>
+    <label class="switch">
+      <input type="checkbox" id="myCheck">
+      <span class="slider round"></span>
+    </label>
+    </div>
+    <div>
+      <h3>Body Text</h3>
+    <label class="switch">
+      <input type="checkbox" id="myCheck1" >
+      <span class="slider round"></span>
+    </label>
+    </div>
+  </main>
+<hr>
+  <footer class="buttons-container">
+    <button class="button-23" role="button">Use ChatGPT!</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

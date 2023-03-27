@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT-Rewriter",
+  "description": "Scrape articles and generate new one",
+  "version": "0.0.1",
+  "author": "Jacopo Cirica",
+  "short_name": "ChatGPT-Rewriter",
+  "action": {
+    "default_icon": "caption.png",
+    "default_title": "ChatGPT-Rewriter",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "caption16.png",
+    "48": "caption48.png",
+    "128": "caption128.png"
+  },
+  "minimum_chrome_version": "88",
+  "permissions": [],
+    "host_permissions": 
+    ["https://type-ai-email.herokuapp.com/*",
+      "https://api.textsynth.com/v1/engines/*",
+      "http://127.0.0.1/", 
+      "https://rewriter.herokuapp.com/*"
+  ],
+  "background": {
+    "service_worker": 
+      "background.js"
+    
+  },
+  "content_scripts": [
+    {
+    "js": ["content.js"],
+    "matches": ["<all_urls>"],
+    "all_frames": true
+  }
+]
+}
